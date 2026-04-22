@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qcyz-paper-clean"
+version = "0.1.0"
+description = "Offline PDF paper indexing pipeline built with LangChain and LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain>=1.0.0,<2.0.0",
+  "langgraph>=1.0.0,<2.0.0",
+  "langchain-chroma>=1.1.0,<2.0.0",
+  "langchain-openai>=1.0.0,<2.0.0",
+  "langchain-text-splitters>=0.3.0,<1.0.0",
+  "langchain-community>=0.3.0,<1.0.0",
+  "pymupdf4llm>=0.0.15",
+]
+
+[tool.setuptools.packages.find]
+include = ["rag_pipeline*"]
